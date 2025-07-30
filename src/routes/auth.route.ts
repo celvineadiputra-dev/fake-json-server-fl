@@ -27,7 +27,7 @@ auth.post('/signIn', async (c) => {
 
         const userPayload = {
             user: credentials,
-            token: 'TOKEN_EXAMPLE_FAKE_JSON_HAPPY_LEARN',
+            token: `TOKEN_EXAMPLE_FAKE_JSON_HAPPY_LEARN_${credentials.email}`,
         }
 
         return apiResponse(c, 200, 'Login successful', userPayload)
@@ -47,10 +47,9 @@ auth.post('/signUp', async (c) => {
             return apiResponse(c, 422, 'Validation failed', errors)
         }
 
-        const authFake = editJsonFile(AuthFakePath, {
-            autosave: true,
-        })
         const { user_name, email, password, profile_picture } = validation.data
+
+        const authFake = editJsonFile(AuthFakePath, { autosave: true })
 
         authFake.append('users', {
             user_name,
@@ -59,8 +58,9 @@ auth.post('/signUp', async (c) => {
             profile_picture: profile_picture ?? null,
         })
 
-        return apiResponse(c, 200, 'Sign Up successfulxx', authFake.get())
+        return apiResponse(c, 201, 'Sign up successful', authFake.get())
     } catch (err) {
+        console.error('SignUp error:', err)
         return apiResponse(c, 500, 'Internal server error')
     }
 })

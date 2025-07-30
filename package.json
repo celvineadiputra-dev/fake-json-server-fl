@@ -12,6 +12,7 @@
         "@hono/node-server": "^1.17.1",
         "@types/edit-json-file": "^1.7.3",
         "chalk": "^5.4.1",
+        "dotenv": "^17.2.1",
         "edit-json-file": "^1.8.1",
         "hono": "^4.8.10",
         "zod": "^4.0.13"

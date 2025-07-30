@@ -3,352 +3,514 @@
         {
             "id": "1",
             "product_name": "Acoustic Guitar",
-            "price": "1499000",
+            "price": 1499000,
             "image_url": "https://picsum.photos/seed/1/400/300",
             "is_active": true
         },
         {
             "id": "2",
             "product_name": "Smart LED TV 42-inch",
-            "price": "4250000",
+            "price": 4250000,
             "image_url": "https://picsum.photos/seed/2/400/300",
             "is_active": true
         },
         {
             "id": "3",
             "product_name": "Wireless Bluetooth Headphones",
-            "price": "799000",
+            "price": 799000,
             "image_url": "https://picsum.photos/seed/3/400/300",
             "is_active": false
         },
         {
             "id": "4",
             "product_name": "Espresso Coffee Machine",
-            "price": "2100000",
+            "price": 2100000,
             "image_url": "https://picsum.photos/seed/4/400/300",
             "is_active": true
         },
         {
             "id": "5",
             "product_name": "Ergonomic Office Chair",
-            "price": "1850000",
+            "price": 1850000,
             "image_url": "https://picsum.photos/seed/5/400/300",
             "is_active": true
         },
         {
             "id": "6",
             "product_name": "Mountain Bike 27-speed",
-            "price": "3500000",
+            "price": 3500000,
             "image_url": "https://picsum.photos/seed/6/400/300",
             "is_active": true
         },
         {
             "id": "7",
             "product_name": "Portable Power Bank 20000mAh",
-            "price": "450000",
+            "price": 450000,
             "image_url": "https://picsum.photos/seed/7/400/300",
             "is_active": false
         },
         {
             "id": "8",
             "product_name": "Digital Drawing Tablet",
-            "price": "1100000",
+            "price": 1100000,
             "image_url": "https://picsum.photos/seed/8/400/300",
             "is_active": true
         },
         {
             "id": "9",
             "product_name": "Yoga Mat Premium",
-            "price": "250000",
+            "price": 250000,
             "image_url": "https://picsum.photos/seed/9/400/300",
             "is_active": true
         },
         {
             "id": "10",
             "product_name": "Hard Cover Notebook Set",
-            "price": "150000",
+            "price": 150000,
             "image_url": "https://picsum.photos/seed/10/400/300",
             "is_active": true
         },
         {
             "id": "11",
             "product_name": "Stainless Steel Water Bottle",
-            "price": "180000",
+            "price": 180000,
             "image_url": "https://picsum.photos/seed/11/400/300",
             "is_active": true
         },
         {
             "id": "12",
             "product_name": "Air Purifier with HEPA Filter",
-            "price": "1600000",
+            "price": 1600000,
             "image_url": "https://picsum.photos/seed/12/400/300",
             "is_active": true
         },
         {
             "id": "13",
             "product_name": "Mechanical Gaming Keyboard",
-            "price": "950000",
+            "price": 950000,
             "image_url": "https://picsum.photos/seed/13/400/300",
             "is_active": false
         },
         {
             "id": "14",
             "product_name": "Electric Standing Desk",
-            "price": "4800000",
+            "price": 4800000,
             "image_url": "https://picsum.photos/seed/14/400/300",
             "is_active": true
         },
         {
             "id": "15",
             "product_name": "Smartwatch Fitness Tracker",
-            "price": "1200000",
+            "price": 1200000,
             "image_url": "https://picsum.photos/seed/15/400/300",
             "is_active": true
         },
         {
             "id": "16",
             "product_name": "Blender for Smoothies",
-            "price": "600000",
+            "price": 600000,
             "image_url": "https://picsum.photos/seed/16/400/300",
             "is_active": true
         },
         {
             "id": "17",
             "product_name": "Camping Tent for 4 Persons",
-            "price": "850000",
+            "price": 850000,
             "image_url": "https://picsum.photos/seed/17/400/300",
             "is_active": true
         },
         {
             "id": "18",
             "product_name": "Drone with 4K Camera",
-            "price": "5500000",
+            "price": 5500000,
             "image_url": "https://picsum.photos/seed/18/400/300",
             "is_active": false
         },
         {
             "id": "19",
             "product_name": "Leather Wallet for Men",
-            "price": "350000",
+            "price": 350000,
             "image_url": "https://picsum.photos/seed/19/400/300",
             "is_active": true
         },
         {
             "id": "20",
             "product_name": "Noise Cancelling Earbuds",
-            "price": "1900000",
+            "price": 1900000,
             "image_url": "https://picsum.photos/seed/20/400/300",
             "is_active": true
         },
         {
             "id": "21",
             "product_name": "Ceramic Dinnerware Set",
-            "price": "1150000",
+            "price": 1150000,
             "image_url": "https://picsum.photos/seed/21/400/300",
             "is_active": true
         },
         {
             "id": "22",
             "product_name": "Running Shoes for Women",
-            "price": "999000",
+            "price": 999000,
             "image_url": "https://picsum.photos/seed/22/400/300",
             "is_active": true
         },
         {
             "id": "23",
             "product_name": "Vintage Desk Lamp",
-            "price": "450000",
+            "price": 450000,
             "image_url": "https://picsum.photos/seed/23/400/300",
             "is_active": true
         },
         {
             "id": "24",
             "product_name": "External SSD 1TB",
-            "price": "1750000",
+            "price": 1750000,
             "image_url": "https://picsum.photos/seed/24/400/300",
             "is_active": false
         },
         {
             "id": "25",
             "product_name": "Digital Kitchen Scale",
-            "price": "220000",
+            "price": 220000,
             "image_url": "https://picsum.photos/seed/25/400/300",
             "is_active": true
         },
         {
             "id": "26",
             "product_name": "Home Security Camera",
-            "price": "890000",
+            "price": 890000,
             "image_url": "https://picsum.photos/seed/26/400/300",
             "is_active": true
         },
         {
             "id": "27",
             "product_name": "Cordless Vacuum Cleaner",
-            "price": "2900000",
+            "price": 2900000,
             "image_url": "https://picsum.photos/seed/27/400/300",
             "is_active": true
         },
         {
             "id": "28",
             "product_name": "Scented Candle Set",
-            "price": "310000",
+            "price": 310000,
             "image_url": "https://picsum.photos/seed/28/400/300",
             "is_active": true
         },
         {
             "id": "29",
             "product_name": "Travel Backpack 40L",
-            "price": "750000",
+            "price": 750000,
             "image_url": "https://picsum.photos/seed/29/400/300",
             "is_active": false
         },
         {
             "id": "30",
             "product_name": "Portable Bluetooth Speaker",
-            "price": "650000",
+            "price": 650000,
             "image_url": "https://picsum.photos/seed/30/400/300",
             "is_active": true
         },
         {
             "id": "31",
             "product_name": "Electric Kettle 1.7L",
-            "price": "380000",
+            "price": 380000,
             "image_url": "https://picsum.photos/seed/31/400/300",
             "is_active": true
         },
         {
             "id": "32",
             "product_name": "Gaming Mouse Pad XXL",
-            "price": "290000",
+            "price": 290000,
             "image_url": "https://picsum.photos/seed/32/400/300",
             "is_active": true
         },
         {
             "id": "33",
             "product_name": "Air Fryer 5.5L",
-            "price": "1300000",
+            "price": 1300000,
             "image_url": "https://picsum.photos/seed/33/400/300",
             "is_active": true
         },
         {
             "id": "34",
             "product_name": "Set of 5 Resistance Bands",
-            "price": "195000",
+            "price": 195000,
             "image_url": "https://picsum.photos/seed/34/400/300",
             "is_active": true
         },
         {
             "id": "35",
             "product_name": "Ultra-Wide Curved Monitor 34-inch",
-            "price": "7500000",
+            "price": 7500000,
             "image_url": "https://picsum.photos/seed/35/400/300",
             "is_active": true
         },
         {
             "id": "36",
             "product_name": "Weighted Blanket 7kg",
-            "price": "1100000",
+            "price": 1100000,
             "image_url": "https://picsum.photos/seed/36/400/300",
             "is_active": false
         },
         {
             "id": "37",
             "product_name": "Fountain Pen with Ink Bottle",
-            "price": "550000",
+            "price": 550000,
             "image_url": "https://picsum.photos/seed/37/400/300",
             "is_active": true
         },
         {
             "id": "38",
             "product_name": "Waterproof Action Camera",
-            "price": "2200000",
+            "price": 2200000,
             "image_url": "https://picsum.photos/seed/38/400/300",
             "is_active": true
         },
         {
             "id": "39",
             "product_name": "Robot Vacuum Cleaner",
-            "price": "4100000",
+            "price": 4100000,
             "image_url": "https://picsum.photos/seed/39/400/300",
             "is_active": true
         },
         {
             "id": "40",
             "product_name": "Insulated Lunch Box",
-            "price": "280000",
+            "price": 280000,
             "image_url": "https://picsum.photos/seed/40/400/300",
             "is_active": true
         },
         {
             "id": "41",
             "product_name": "Foldable Laptop Stand",
-            "price": "320000",
+            "price": 320000,
             "image_url": "https://picsum.photos/seed/41/400/300",
             "is_active": true
         },
         {
             "id": "42",
             "product_name": "USB C Hub Multiport Adapter",
-            "price": "490000",
+            "price": 490000,
             "image_url": "https://picsum.photos/seed/42/400/300",
             "is_active": false
         },
         {
             "id": "43",
             "product_name": "Electric Toothbrush",
-            "price": "720000",
+            "price": 720000,
             "image_url": "https://picsum.photos/seed/43/400/300",
             "is_active": true
         },
         {
             "id": "44",
             "product_name": "Cotton Bath Towel Set",
-            "price": "400000",
+            "price": 400000,
             "image_url": "https://picsum.photos/seed/44/400/300",
             "is_active": true
         },
         {
             "id": "45",
             "product_name": "Indoor Herb Garden Kit",
-            "price": "600000",
+            "price": 600000,
             "image_url": "https://picsum.photos/seed/45/400/300",
             "is_active": true
         },
         {
             "id": "46",
             "product_name": "Professional Hair Dryer",
-            "price": "850000",
+            "price": 850000,
             "image_url": "https://picsum.photos/seed/46/400/300",
             "is_active": true
         },
         {
             "id": "47",
             "product_name": "Jigsaw Puzzle 1000 Pieces",
-            "price": "250000",
+            "price": 250000,
             "image_url": "https://picsum.photos/seed/47/400/300",
             "is_active": true
         },
         {
             "id": "48",
             "product_name": "Cast Iron Skillet",
-            "price": "580000",
+            "price": 580000,
             "image_url": "https://picsum.photos/seed/48/400/300",
             "is_active": false
         },
         {
             "id": "49",
             "product_name": "Webcam 1080p with Microphone",
-            "price": "670000",
+            "price": 670000,
             "image_url": "https://picsum.photos/seed/49/400/300",
             "is_active": true
         },
         {
             "id": "50",
             "product_name": "Memory Foam Pillow",
-            "price": "480000",
+            "price": 480000,
             "image_url": "https://picsum.photos/seed/50/400/300",
             "is_active": true
+        }
+    ],
+    "ratings": [
+        {
+            "rating_id": "RT001",
+            "product_id": 15,
+            "user_name": "Andi Pratama",
+            "rating_value": 5,
+            "comment": "Smartwatch-nya keren banget! Baterai awet dan fiturnya lengkap. Sangat membantu untuk tracking olahraga. Pengiriman juga cepat.",
+            "created_at": "2025-07-29T10:15:30Z"
+        },
+        {
+            "rating_id": "RT002",
+            "product_id": 5,
+            "user_name": "Citra Lestari",
+            "rating_value": 4,
+            "comment": "Kursinya nyaman untuk kerja seharian. Pemasangannya agak sedikit rumit tapi hasilnya memuaskan.",
+            "created_at": "2025-07-29T09:45:10Z"
+        },
+        {
+            "rating_id": "RT003",
+            "product_id": 33,
+            "user_name": "Budi Setiawan",
+            "rating_value": 5,
+            "comment": "Air fryer ini mengubah cara saya memasak. Makanan jadi lebih sehat dan tetap renyah. Ukurannya pas untuk keluarga kecil.",
+            "created_at": "2025-07-28T18:20:05Z"
+        },
+        {
+            "rating_id": "RT004",
+            "product_id": 20,
+            "user_name": "Dewi Anggraini",
+            "rating_value": 3,
+            "comment": "Kualitas suaranya standar saja, tidak terlalu istimewa. Noise cancelling-nya kurang efektif di tempat ramai.",
+            "created_at": "2025-07-28T15:10:55Z"
+        },
+        {
+            "rating_id": "RT005",
+            "product_id": 5,
+            "user_name": "Eko Susanto",
+            "rating_value": 5,
+            "comment": "Sepedanya mantap! Kokoh dan perpindahan giginya mulus. Sudah dicoba di trek ringan, performanya bagus.",
+            "created_at": "2025-07-27T11:05:00Z"
+        },
+        {
+            "rating_id": "RT006",
+            "product_id": 49,
+            "user_name": "Fitriani",
+            "rating_value": 4,
+            "comment": "Webcam-nya jernih, gambarnya tajam untuk meeting online. Plug and play, sangat mudah digunakan.",
+            "created_at": "2025-07-27T09:30:12Z"
+        },
+        {
+            "rating_id": "RT007",
+            "product_id": 11,
+            "user_name": "Gunawan",
+            "rating_value": 5,
+            "comment": "Botolnya bagus, bisa menahan panas cukup lama. Tidak bocor dan desainnya elegan.",
+            "created_at": "2025-07-26T20:00:40Z"
+        },
+        {
+            "rating_id": "RT008",
+            "product_id": 42,
+            "user_name": "Hilda Nurul",
+            "rating_value": 2,
+            "comment": "Beberapa port tidak berfungsi setelah sebulan pemakaian. Agak mengecewakan.",
+            "created_at": "2025-07-26T14:55:21Z"
+        },
+        {
+            "rating_id": "RT009",
+            "product_id": 22,
+            "user_name": "Indah Permata",
+            "rating_value": 5,
+            "comment": "Sepatunya ringan dan sangat nyaman untuk lari. Ukurannya pas sesuai deskripsi.",
+            "created_at": "2025-07-25T13:00:15Z"
+        },
+        {
+            "rating_id": "RT010",
+            "product_id": 35,
+            "user_name": "Joko Widodo",
+            "rating_value": 5,
+            "comment": "Monitornya luar biasa! Pengalaman main game dan kerja jadi jauh lebih imersif. Resolusi tajam dan warnanya akurat.",
+            "created_at": "2025-07-25T12:12:12Z"
+        },
+        {
+            "rating_id": "RT011",
+            "product_id": 1,
+            "user_name": "Kartika Sari",
+            "rating_value": 4,
+            "comment": "Suara gitarnya bagus untuk pemula. Kualitas kayunya juga lumayan untuk harga segini.",
+            "created_at": "2025-07-24T19:40:00Z"
+        },
+        {
+            "rating_id": "RT012",
+            "product_id": 18,
+            "user_name": "Lina Marlina",
+            "rating_value": 3,
+            "comment": "Kualitas kamera drone-nya bagus, tapi aplikasinya sering crash di hp saya. Baterainya juga cepat habis.",
+            "created_at": "2025-07-24T16:33:00Z"
+        },
+        {
+            "rating_id": "RT013",
+            "product_id": 50,
+            "user_name": "Muhammad Rizky",
+            "rating_value": 5,
+            "comment": "Bantalnya empuk dan bikin tidur lebih nyenyak. Benar-benar menopang leher dengan baik.",
+            "created_at": "2025-07-23T22:05:48Z"
+        },
+        {
+            "rating_id": "RT014",
+            "product_id": 4,
+            "user_name": "Nurul Hidayah",
+            "rating_value": 4,
+            "comment": "Mesin kopinya bekerja dengan baik, espressonya mantap. Hanya saja bodinya agak besar, makan tempat.",
+            "created_at": "2025-07-23T08:50:00Z"
+        },
+        {
+            "rating_id": "RT015",
+            "product_id": 30,
+            "user_name": "Putra Jaya",
+            "rating_value": 5,
+            "comment": "Speakernya kecil tapi suaranya nendang! Bass-nya terasa dan koneksi bluetooth stabil.",
+            "created_at": "2025-07-22T17:21:34Z"
+        },
+        {
+            "rating_id": "RT016",
+            "product_id": 27,
+            "user_name": "Rina Amelia",
+            "rating_value": 4,
+            "comment": "Daya hisapnya kuat, sangat membantu membersihkan debu dan bulu hewan. Praktis karena tanpa kabel.",
+            "created_at": "2025-07-22T11:11:11Z"
+        },
+        {
+            "rating_id": "RT017",
+            "product_id": 15,
+            "user_name": "Siti Aminah",
+            "rating_value": 4,
+            "comment": "Suka dengan desainnya. Fitur tracking tidurnya akurat. Hanya saja pilihan watch face-nya terbatas.",
+            "created_at": "2025-07-21T21:30:00Z"
+        },
+        {
+            "rating_id": "RT018",
+            "product_id": 45,
+            "user_name": "Teguh Santoso",
+            "rating_value": 5,
+            "comment": "Produk yang sangat menarik. Mudah dirakit dan tanaman herbal saya mulai tumbuh. Lampu tanamannya bekerja dengan baik.",
+            "created_at": "2025-07-21T10:00:00Z"
+        },
+        {
+            "rating_id": "RT019",
+            "product_id": 33,
+            "user_name": "Utami Dewi",
+            "rating_value": 5,
+            "comment": "Suka sekali! Masak kentang goreng dan ayam jadi praktis dan hasilnya sempurna.",
+            "created_at": "2025-07-20T14:25:30Z"
+        },
+        {
+            "rating_id": "RT020",
+            "product_id": 13,
+            "user_name": "Yoga Permana",
+            "rating_value": 1,
+            "comment": "Baru dipakai 2 minggu tombol 'W' sudah tidak responsif. Kualitasnya sangat buruk.",
+            "created_at": "2025-07-20T09:00:19Z"
         }
     ]
 }
