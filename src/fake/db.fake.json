@@ -1,0 +1,354 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "product_name": "Acoustic Guitar",
+            "price": "1499000",
+            "image_url": "https://picsum.photos/seed/1/400/300",
+            "is_active": true
+        },
+        {
+            "id": "2",
+            "product_name": "Smart LED TV 42-inch",
+            "price": "4250000",
+            "image_url": "https://picsum.photos/seed/2/400/300",
+            "is_active": true
+        },
+        {
+            "id": "3",
+            "product_name": "Wireless Bluetooth Headphones",
+            "price": "799000",
+            "image_url": "https://picsum.photos/seed/3/400/300",
+            "is_active": false
+        },
+        {
+            "id": "4",
+            "product_name": "Espresso Coffee Machine",
+            "price": "2100000",
+            "image_url": "https://picsum.photos/seed/4/400/300",
+            "is_active": true
+        },
+        {
+            "id": "5",
+            "product_name": "Ergonomic Office Chair",
+            "price": "1850000",
+            "image_url": "https://picsum.photos/seed/5/400/300",
+            "is_active": true
+        },
+        {
+            "id": "6",
+            "product_name": "Mountain Bike 27-speed",
+            "price": "3500000",
+            "image_url": "https://picsum.photos/seed/6/400/300",
+            "is_active": true
+        },
+        {
+            "id": "7",
+            "product_name": "Portable Power Bank 20000mAh",
+            "price": "450000",
+            "image_url": "https://picsum.photos/seed/7/400/300",
+            "is_active": false
+        },
+        {
+            "id": "8",
+            "product_name": "Digital Drawing Tablet",
+            "price": "1100000",
+            "image_url": "https://picsum.photos/seed/8/400/300",
+            "is_active": true
+        },
+        {
+            "id": "9",
+            "product_name": "Yoga Mat Premium",
+            "price": "250000",
+            "image_url": "https://picsum.photos/seed/9/400/300",
+            "is_active": true
+        },
+        {
+            "id": "10",
+            "product_name": "Hard Cover Notebook Set",
+            "price": "150000",
+            "image_url": "https://picsum.photos/seed/10/400/300",
+            "is_active": true
+        },
+        {
+            "id": "11",
+            "product_name": "Stainless Steel Water Bottle",
+            "price": "180000",
+            "image_url": "https://picsum.photos/seed/11/400/300",
+            "is_active": true
+        },
+        {
+            "id": "12",
+            "product_name": "Air Purifier with HEPA Filter",
+            "price": "1600000",
+            "image_url": "https://picsum.photos/seed/12/400/300",
+            "is_active": true
+        },
+        {
+            "id": "13",
+            "product_name": "Mechanical Gaming Keyboard",
+            "price": "950000",
+            "image_url": "https://picsum.photos/seed/13/400/300",
+            "is_active": false
+        },
+        {
+            "id": "14",
+            "product_name": "Electric Standing Desk",
+            "price": "4800000",
+            "image_url": "https://picsum.photos/seed/14/400/300",
+            "is_active": true
+        },
+        {
+            "id": "15",
+            "product_name": "Smartwatch Fitness Tracker",
+            "price": "1200000",
+            "image_url": "https://picsum.photos/seed/15/400/300",
+            "is_active": true
+        },
+        {
+            "id": "16",
+            "product_name": "Blender for Smoothies",
+            "price": "600000",
+            "image_url": "https://picsum.photos/seed/16/400/300",
+            "is_active": true
+        },
+        {
+            "id": "17",
+            "product_name": "Camping Tent for 4 Persons",
+            "price": "850000",
+            "image_url": "https://picsum.photos/seed/17/400/300",
+            "is_active": true
+        },
+        {
+            "id": "18",
+            "product_name": "Drone with 4K Camera",
+            "price": "5500000",
+            "image_url": "https://picsum.photos/seed/18/400/300",
+            "is_active": false
+        },
+        {
+            "id": "19",
+            "product_name": "Leather Wallet for Men",
+            "price": "350000",
+            "image_url": "https://picsum.photos/seed/19/400/300",
+            "is_active": true
+        },
+        {
+            "id": "20",
+            "product_name": "Noise Cancelling Earbuds",
+            "price": "1900000",
+            "image_url": "https://picsum.photos/seed/20/400/300",
+            "is_active": true
+        },
+        {
+            "id": "21",
+            "product_name": "Ceramic Dinnerware Set",
+            "price": "1150000",
+            "image_url": "https://picsum.photos/seed/21/400/300",
+            "is_active": true
+        },
+        {
+            "id": "22",
+            "product_name": "Running Shoes for Women",
+            "price": "999000",
+            "image_url": "https://picsum.photos/seed/22/400/300",
+            "is_active": true
+        },
+        {
+            "id": "23",
+            "product_name": "Vintage Desk Lamp",
+            "price": "450000",
+            "image_url": "https://picsum.photos/seed/23/400/300",
+            "is_active": true
+        },
+        {
+            "id": "24",
+            "product_name": "External SSD 1TB",
+            "price": "1750000",
+            "image_url": "https://picsum.photos/seed/24/400/300",
+            "is_active": false
+        },
+        {
+            "id": "25",
+            "product_name": "Digital Kitchen Scale",
+            "price": "220000",
+            "image_url": "https://picsum.photos/seed/25/400/300",
+            "is_active": true
+        },
+        {
+            "id": "26",
+            "product_name": "Home Security Camera",
+            "price": "890000",
+            "image_url": "https://picsum.photos/seed/26/400/300",
+            "is_active": true
+        },
+        {
+            "id": "27",
+            "product_name": "Cordless Vacuum Cleaner",
+            "price": "2900000",
+            "image_url": "https://picsum.photos/seed/27/400/300",
+            "is_active": true
+        },
+        {
+            "id": "28",
+            "product_name": "Scented Candle Set",
+            "price": "310000",
+            "image_url": "https://picsum.photos/seed/28/400/300",
+            "is_active": true
+        },
+        {
+            "id": "29",
+            "product_name": "Travel Backpack 40L",
+            "price": "750000",
+            "image_url": "https://picsum.photos/seed/29/400/300",
+            "is_active": false
+        },
+        {
+            "id": "30",
+            "product_name": "Portable Bluetooth Speaker",
+            "price": "650000",
+            "image_url": "https://picsum.photos/seed/30/400/300",
+            "is_active": true
+        },
+        {
+            "id": "31",
+            "product_name": "Electric Kettle 1.7L",
+            "price": "380000",
+            "image_url": "https://picsum.photos/seed/31/400/300",
+            "is_active": true
+        },
+        {
+            "id": "32",
+            "product_name": "Gaming Mouse Pad XXL",
+            "price": "290000",
+            "image_url": "https://picsum.photos/seed/32/400/300",
+            "is_active": true
+        },
+        {
+            "id": "33",
+            "product_name": "Air Fryer 5.5L",
+            "price": "1300000",
+            "image_url": "https://picsum.photos/seed/33/400/300",
+            "is_active": true
+        },
+        {
+            "id": "34",
+            "product_name": "Set of 5 Resistance Bands",
+            "price": "195000",
+            "image_url": "https://picsum.photos/seed/34/400/300",
+            "is_active": true
+        },
+        {
+            "id": "35",
+            "product_name": "Ultra-Wide Curved Monitor 34-inch",
+            "price": "7500000",
+            "image_url": "https://picsum.photos/seed/35/400/300",
+            "is_active": true
+        },
+        {
+            "id": "36",
+            "product_name": "Weighted Blanket 7kg",
+            "price": "1100000",
+            "image_url": "https://picsum.photos/seed/36/400/300",
+            "is_active": false
+        },
+        {
+            "id": "37",
+            "product_name": "Fountain Pen with Ink Bottle",
+            "price": "550000",
+            "image_url": "https://picsum.photos/seed/37/400/300",
+            "is_active": true
+        },
+        {
+            "id": "38",
+            "product_name": "Waterproof Action Camera",
+            "price": "2200000",
+            "image_url": "https://picsum.photos/seed/38/400/300",
+            "is_active": true
+        },
+        {
+            "id": "39",
+            "product_name": "Robot Vacuum Cleaner",
+            "price": "4100000",
+            "image_url": "https://picsum.photos/seed/39/400/300",
+            "is_active": true
+        },
+        {
+            "id": "40",
+            "product_name": "Insulated Lunch Box",
+            "price": "280000",
+            "image_url": "https://picsum.photos/seed/40/400/300",
+            "is_active": true
+        },
+        {
+            "id": "41",
+            "product_name": "Foldable Laptop Stand",
+            "price": "320000",
+            "image_url": "https://picsum.photos/seed/41/400/300",
+            "is_active": true
+        },
+        {
+            "id": "42",
+            "product_name": "USB C Hub Multiport Adapter",
+            "price": "490000",
+            "image_url": "https://picsum.photos/seed/42/400/300",
+            "is_active": false
+        },
+        {
+            "id": "43",
+            "product_name": "Electric Toothbrush",
+            "price": "720000",
+            "image_url": "https://picsum.photos/seed/43/400/300",
+            "is_active": true
+        },
+        {
+            "id": "44",
+            "product_name": "Cotton Bath Towel Set",
+            "price": "400000",
+            "image_url": "https://picsum.photos/seed/44/400/300",
+            "is_active": true
+        },
+        {
+            "id": "45",
+            "product_name": "Indoor Herb Garden Kit",
+            "price": "600000",
+            "image_url": "https://picsum.photos/seed/45/400/300",
+            "is_active": true
+        },
+        {
+            "id": "46",
+            "product_name": "Professional Hair Dryer",
+            "price": "850000",
+            "image_url": "https://picsum.photos/seed/46/400/300",
+            "is_active": true
+        },
+        {
+            "id": "47",
+            "product_name": "Jigsaw Puzzle 1000 Pieces",
+            "price": "250000",
+            "image_url": "https://picsum.photos/seed/47/400/300",
+            "is_active": true
+        },
+        {
+            "id": "48",
+            "product_name": "Cast Iron Skillet",
+            "price": "580000",
+            "image_url": "https://picsum.photos/seed/48/400/300",
+            "is_active": false
+        },
+        {
+            "id": "49",
+            "product_name": "Webcam 1080p with Microphone",
+            "price": "670000",
+            "image_url": "https://picsum.photos/seed/49/400/300",
+            "is_active": true
+        },
+        {
+            "id": "50",
+            "product_name": "Memory Foam Pillow",
+            "price": "480000",
+            "image_url": "https://picsum.photos/seed/50/400/300",
+            "is_active": true
+        }
+    ]
+}

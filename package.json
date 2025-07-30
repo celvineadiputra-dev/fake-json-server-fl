@@ -1,0 +1,31 @@
+{
+    "name": "fake-json-server-fl",
+    "type": "module",
+    "scripts": {
+        "dev": "tsx watch src/index.ts",
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "format": "yarn exec prettier .",
+        "prepare": "husky"
+    },
+    "dependencies": {
+        "@hono/node-server": "^1.17.1",
+        "@types/edit-json-file": "^1.7.3",
+        "chalk": "^5.4.1",
+        "edit-json-file": "^1.8.1",
+        "hono": "^4.8.10",
+        "zod": "^4.0.13"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.17",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.1.2",
+        "prettier": "3.6.2",
+        "tsx": "^4.7.1",
+        "typescript": "^5.8.3"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    },
+    "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

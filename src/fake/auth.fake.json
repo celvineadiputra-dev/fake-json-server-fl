@@ -1,0 +1,10 @@
+{
+    "users": [
+        {
+            "user_name": "Fake API JSON",
+            "email": "example@mail.com",
+            "password": "12345678",
+            "profile_picture": null
+        }
+    ]
+}
