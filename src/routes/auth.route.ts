@@ -58,7 +58,7 @@ auth.post('/signUp', async (c) => {
             profile_picture: profile_picture ?? null,
         })
 
-        return apiResponse(c, 201, 'Sign up successful', authFake.get())
+        return apiResponse(c, 201, 'Sign up successful', null)
     } catch (err) {
         console.error('SignUp error:', err)
         return apiResponse(c, 500, 'Internal server error')

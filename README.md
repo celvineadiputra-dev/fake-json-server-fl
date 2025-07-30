@@ -146,6 +146,111 @@ If your `db.fake.json` has a `"products"` key, the endpoints would be:
 
 ## 📚 API Documentation
 
+<details>
+    <summary>
+        User Sign In
+    </summary>
+
+### User Sign In
+
+Authenticates an existing user with their email and password. On success, it returns the user's data along with a session token.
+
+- **Method:** `POST`
+- **Endpoint:** `/auth/signIn`
+
+#### Request Body
+
+The request body must be a JSON object containing the user's email and password.
+
+```json
+{
+    "email": "user@example.com",
+    "password": "yourpassword"
+}
+```
+
+#### Success Response (200 OK)
+
+If the credentials are valid, the API will respond with the user's data and a token.
+
+```json
+{
+    "status": 200,
+    "message": "Login successful",
+    "data": {
+        "user": {
+            "user_name": "John Doe",
+            "email": "user@example.com"
+        },
+        "token": "TOKEN_EXAMPLE_FAKE_JSON_HAPPY_LEARN_user@example.com"
+    }
+}
+```
+
+#### Error Responses
+
+- **`401 Unauthorized`**: Returned if the provided email or password is incorrect.
+- **`422 Unprocessable Entity`**: Returned if the request body fails validation (e.g., missing fields, invalid email format).
+- **`500 Internal Server Error`**: Returned for unexpected server-side errors.
+
+</details>
+
+<details>
+    <summary>
+        User Sign Up
+    </summary>
+
+### User Sign Up
+
+Creates a new user account.
+
+- **Method:** `POST`
+- **Endpoint:** `/auth/signUp`
+
+#### Request Body
+
+The request body must be a JSON object containing the new user's details. The `profile_picture` field is optional.
+
+- **`user_name`** (required): The user's full name.
+- **`email`** (required): The user's unique email address.
+- **`password`** (required): The user's password.
+- **`profile_picture`** (optional): A URL to the user's profile picture.
+
+<!-- end list -->
+
+```json
+{
+    "user_name": "Jane Doe",
+    "email": "jane.doe@example.com",
+    "password": "a-very-secure-password",
+    "profile_picture": "https://example.com/path/to/image.jpg"
+}
+```
+
+#### Success Response (201 Created)
+
+Upon successful creation, the API returns a confirmation message and the updated list of all users.
+
+```json
+{
+    "status": 201,
+    "message": "Sign up successful",
+    "data": null
+}
+```
+
+#### Error Responses
+
+- **`422 Unprocessable Entity`**: Returned if the request body fails validation (e.g., email already in use, password too weak, missing required fields).
+- **`500 Internal Server Error`**: Returned for unexpected server-side errors.
+
+</details>
+
+<details>
+    <summary>
+        Fetch Data (Paginated)
+    </summary>
+
 ### Fetch Data (Paginated)
 
 Retrieves a paginated list of items from the specified resource.
@@ -187,7 +292,10 @@ GET http://localhost:3000/api/products?page=1&size=2
 }
 ```
 
----
+</details>
+
+<details>
+    <summary>Search Data</summary>
 
 ### Search Data
 
@@ -233,7 +341,12 @@ GET http://localhost:3000/api/products/search/name?q=item
 }
 ```
 
----
+</details>
+
+<details>
+    <summary>
+        Fetch All Data
+    </summary>
 
 ### Fetch All Data
 
@@ -265,7 +378,12 @@ GET http://localhost:3000/api/products/all
 }
 ```
 
----
+</details>
+
+<details>
+    <summary>
+        Fetch Data by ID
+    </summary>
 
 ### Fetch Data by ID
 
@@ -300,7 +418,12 @@ GET http://localhost:3000/api/products/1
 }
 ```
 
----
+</details>
+
+<details>
+    <summary>
+        Add New Data
+    </summary>
 
 ### Add New Data
 
@@ -324,7 +447,12 @@ Creates a new item in the specified resource.
 }
 ```
 
----
+</details>
+
+<details>
+    <summary>
+        Update Data
+    </summary>
 
 ### Update Data
 
@@ -348,7 +476,12 @@ Updates an existing item by its id. Supports both full (`PUT`) and partial (`PAT
 }
 ```
 
----
+</details>
+
+<details>
+    <summary>
+        Delete Data
+    </summary>
 
 ### Delete Data
 
@@ -368,7 +501,12 @@ Deletes a specific item by its id.
 DELETE http://localhost:3000/api/products/3
 ```
 
----
+</details>
+
+<details>
+    <summary>
+        Fetching Related Data
+    </summary>
 
 ## Fetching Related Data
 
@@ -385,6 +523,8 @@ GET http://localhost:3000/api/ratings/search/product_id?q=5
 - This request searches the `/api/ratings` endpoint.
 - It specifically looks within the `productId` field.
 - It returns all ratings where `productId` is `5`.
+
+</details>
 
 ## 🤝 Contributing
 
