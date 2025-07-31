@@ -112,7 +112,10 @@ For every key you define, a corresponding RESTful resource is exposed, supportin
 #### Base URL
 
 The base URL for all data endpoints follows this pattern:
-`http://localhost:3000/api/:key`
+`http://localhost:3000/api/<TYPE ROUTE>/:key` (Type Route : public or protected)
+
+Specifically for sign-in and sign-up, the base URL is:
+`http://localhost:3000/api`
 
 #### Endpoints
 
@@ -132,15 +135,15 @@ The base URL for all data endpoints follows this pattern:
 
 If your `db.fake.json` has a `"products"` key, the endpoints would be:
 
-| Method   | Example Endpoint                       |
-| :------- | :------------------------------------- |
-| `GET`    | `/api/products?page=1&size=5`          |
-| `GET`    | `/api/products/all`                    |
-| `GET`    | `/api/products/search/name?q=keyboard` |
-| `GET`    | `/api/products/1`                      |
-| `POST`   | `/api/products`                        |
-| `PUT`    | `/api/products/1`                      |
-| `DELETE` | `/api/products/1`                      |
+| Method   | Example Endpoint                                    |
+| :------- | :-------------------------------------------------- |
+| `GET`    | `/api/<TYPE ROUTE>/products?page=1&size=5`          |
+| `GET`    | `/api/<TYPE ROUTE>/products/all`                    |
+| `GET`    | `/api/<TYPE ROUTE>/products/search/name?q=keyboard` |
+| `GET`    | `/api/<TYPE ROUTE>/products/1`                      |
+| `POST`   | `/api/<TYPE ROUTE>/products`                        |
+| `PUT`    | `/api/<TYPE ROUTE>/products/1`                      |
+| `DELETE` | `/api/<TYPE ROUTE>/products/1`                      |
 
 ---
 
@@ -256,7 +259,8 @@ Upon successful creation, the API returns a confirmation message and the updated
 Retrieves a paginated list of items from the specified resource.
 
 - **Method:** `GET`
-- **Endpoint:** `/api/:key`
+- **Endpoint:** `/api/<TYPE ROUTE>/:key`
+- **Headers:** `Authorization (required if using type route : protected)`
 
 #### URL Parameters
 
@@ -270,7 +274,9 @@ Retrieves a paginated list of items from the specified resource.
 #### Example Request
 
 ```http
-GET http://localhost:3000/api/products?page=1&size=2
+GET http://localhost:3000/api/public/products?page=1&size=2
+
+GET http://localhost:3000/api/protected/products?page=1&size=2
 ```
 
 #### Success Response (200 OK)
@@ -302,7 +308,8 @@ GET http://localhost:3000/api/products?page=1&size=2
 Performs a search for items within a specific field of a resource.
 
 - **Method:** `GET`
-- **Endpoint:** `/api/:key/search/:field`
+- **Endpoint:** `/api/<TYPE ROUTE>/:key/search/:field`
+- **Headers:** `Authorization (required if using type route : protected)`
 
 #### URL Parameters
 
@@ -318,7 +325,7 @@ Performs a search for items within a specific field of a resource.
 #### Example Request
 
 ```http
-GET http://localhost:3000/api/products/search/name?q=item
+GET http://localhost:3000/api/<TYPE ROUTE>/products/search/name?q=item
 ```
 
 #### Success Response (200 OK)
@@ -353,7 +360,8 @@ GET http://localhost:3000/api/products/search/name?q=item
 Retrieves all items from the specified resource without pagination.
 
 - **Method:** `GET`
-- **Endpoint:** `/api/:key/all`
+- **Endpoint:** `/api/<TYPE ROUTE>/:key/all`
+- **Headers:** `Authorization (required if using type route : protected)`
 
 #### URL Parameters
 
@@ -362,7 +370,7 @@ Retrieves all items from the specified resource without pagination.
 #### Example Request
 
 ```http
-GET http://localhost:3000/api/products/all
+GET http://localhost:3000/api/<TYPE ROUTE>/products/all
 ```
 
 #### Success Response (200 OK)
@@ -390,7 +398,8 @@ GET http://localhost:3000/api/products/all
 Retrieves a single, specific item by its id.
 
 - **Method:** `GET`
-- **Endpoint:** `/api/:key/:id`
+- **Endpoint:** `/api/<TYPE ROUTE>/:key/:id`
+- **Headers:** `Authorization (required if using type route : protected)`
 
 #### URL Parameters
 
@@ -400,7 +409,7 @@ Retrieves a single, specific item by its id.
 #### Example Request
 
 ```http
-GET http://localhost:3000/api/products/1
+GET http://localhost:3000/api/<TYPE ROUTE>/products/1
 ```
 
 #### Success Response (200 OK)
@@ -430,7 +439,8 @@ GET http://localhost:3000/api/products/1
 Creates a new item in the specified resource.
 
 - **Method:** `POST`
-- **Endpoint:** `/api/:key`
+- **Endpoint:** `/api/<TYPE ROUTE>/:key`
+- **Headers:** `Authorization (required if using type route : protected)`
 
 #### URL Parameters
 
@@ -459,7 +469,8 @@ Creates a new item in the specified resource.
 Updates an existing item by its id. Supports both full (`PUT`) and partial (`PATCH`) updates.
 
 - **Method:** `PUT` / `PATCH`
-- **Endpoint:** `/api/:key/:id`
+- **Endpoint:** `/api/<TYPE ROUTE>/:key/:id`
+- **Headers:** `Authorization (required if using type route : protected)`
 
 #### URL Parameters
 
@@ -488,7 +499,8 @@ Updates an existing item by its id. Supports both full (`PUT`) and partial (`PAT
 Deletes a specific item by its id.
 
 - **Method:** `DELETE`
-- **Endpoint:** `/api/:key/:id`
+- **Endpoint:** `/api/<TYPE ROUTE>/:key/:id`
+- **Headers:** `Authorization (required if using type route : protected)`
 
 #### URL Parameters
 
@@ -498,7 +510,7 @@ Deletes a specific item by its id.
 #### Example Request
 
 ```http
-DELETE http://localhost:3000/api/products/3
+DELETE http://localhost:3000/api/<TYPE ROUTE>/products/3
 ```
 
 </details>
@@ -517,10 +529,10 @@ For example, to get all **ratings** for the **product** with an `id` of `5`, you
 ### Example Request
 
 ```http
-GET http://localhost:3000/api/ratings/search/product_id?q=5
+GET http://localhost:3000/api/<TYPE ROUTE>/ratings/search/product_id?q=5
 ```
 
-- This request searches the `/api/ratings` endpoint.
+- This request searches the `/api/<TYPE ROUTE>/ratings` endpoint.
 - It specifically looks within the `productId` field.
 - It returns all ratings where `productId` is `5`.
 

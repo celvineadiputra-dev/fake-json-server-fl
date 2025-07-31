@@ -16,7 +16,18 @@ app.get('/up', async (c) => {
 })
 
 app.route('/auth', auth)
-app.route(':key', main)
+app.route('/public/:key', main)
+
+app.use(async (c, next) => {
+    const token = c.req.header('Authorization')
+
+    if (!token || !token.includes('TOKEN_EXAMPLE_FAKE_JSON_HAPPY_LEARN_')) {
+        return apiResponse(c, 401, 'Unauthorized')
+    }
+
+    await next()
+})
+app.route('/protected/:key', main)
 
 serve(
     {
