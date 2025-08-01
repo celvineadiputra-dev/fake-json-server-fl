@@ -9,6 +9,13 @@ import { readFromLocalStorage } from '@/lib/persistance'
 export const Router = createBrowserRouter([
     {
         Component: GuestLayout,
+        loader: () => {
+            const authFake = readFromLocalStorage('fake_auth')
+            if (authFake) {
+                return redirect('dashboard')
+            }
+            return
+        },
         children: [
             {
                 index: true,
