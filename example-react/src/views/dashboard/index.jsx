@@ -16,7 +16,7 @@ export const DashboardView = () => {
     const [products, setProducts] = useState([])
     const [pagination, setPagination] = useState({
         page: 1,
-        size: 6,
+        size: 8,
         total: 0,
         totalPages: 0,
     })
@@ -64,7 +64,10 @@ export const DashboardView = () => {
                             <CardHeader>
                                 <CardTitle>{item?.product_name}</CardTitle>
                                 <CardDescription>
-                                    Rp.{item?.price}
+                                    {new Intl.NumberFormat('id-ID', {
+                                        style: 'currency',
+                                        currency: 'IDR',
+                                    }).format(item?.price)}
                                 </CardDescription>
                             </CardHeader>
                             <CardContent>
