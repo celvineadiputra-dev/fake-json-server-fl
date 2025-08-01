@@ -26,7 +26,11 @@ auth.post('/signIn', async (c) => {
         }
 
         const userPayload = {
-            user: credentials,
+            user: {
+                email: credentials.email,
+                user_name: credentials.user_name,
+                profile_picture: credentials.profile_picture,
+            },
             token: `TOKEN_EXAMPLE_FAKE_JSON_HAPPY_LEARN_${credentials.email}`,
         }
 
