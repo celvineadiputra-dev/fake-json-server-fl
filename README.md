@@ -52,20 +52,20 @@ Make sure you have one of the following runtimes installed:
     yarn install
     ```
 
-### 3. **Configure Environment Variables**
+3. **Configure Environment Variables**
 
-Start by copying the example environment configuration and renaming it to `.env`:
-
-```bash
-cp .env.example .env
-```
-
-You can then customize the following variables within your `.env` file:
-
-- `PORT`: Define the port your server will run on.
-- `FRONTEND_DOMAIN`: Set the domain for CORS to allow frontend requests.
-
-> 💡 Use `FRONTEND_DOMAIN` to handle Cross-Origin Resource Sharing (CORS) correctly 😉.
+    Start by copying the example environment configuration and renaming it to `.env`:
+    
+    ```bash
+    cp .env.example .env
+    ```
+    
+    You can then customize the following variables within your `.env` file:
+    
+    - `PORT`: Define the port your server will run on.
+    - `FRONTEND_DOMAIN`: Set the domain for CORS to allow frontend requests.
+    <br/>
+    💡 Use `FRONTEND_DOMAIN` to handle Cross-Origin Resource Sharing (CORS) correctly 😉.
 
 4. **Run the development server:**
 
