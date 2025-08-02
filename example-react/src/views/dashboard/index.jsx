@@ -3,15 +3,20 @@ import { Button } from '@/components/ui/button'
 import { NavLink } from 'react-router'
 import { AppPagination } from '@/components/ui/app-pagination'
 import { useProductData } from '../product/hooks/useProductData'
+import { Input } from '@/components/ui/input'
+import { SearchIcon } from 'lucide-react'
 
 export const DashboardView = () => {
     const {
         products,
         pagination,
+        search,
         loading,
         onPageChange,
         onSizeChange,
         handleDeleteProduct,
+        handleSearchChange,
+        handleSearch,
     } = useProductData()
 
     if (loading) {
@@ -26,6 +31,18 @@ export const DashboardView = () => {
                     <NavLink to="/product/create" end>
                         Add new product
                     </NavLink>
+                </Button>
+            </div>
+            <div className="flex space-x-2">
+                <div>
+                    <Input
+                        value={search}
+                        onChange={handleSearchChange}
+                        placeholder="Search"
+                    />
+                </div>
+                <Button size="icon" onClick={handleSearch}>
+                    <SearchIcon />
                 </Button>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-5 2xl:grid-cols-4">
