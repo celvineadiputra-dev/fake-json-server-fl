@@ -6,9 +6,9 @@ import z from 'zod'
 import { SignUpValidation } from '../validations/signUp.validation.js'
 import editJsonFile from 'edit-json-file'
 
-const auth = new Hono()
+const authRoute = new Hono()
 
-auth.post('/signIn', async (c) => {
+authRoute.post('/signIn', async (c) => {
     try {
         const body = await c.req.json()
 
@@ -41,7 +41,7 @@ auth.post('/signIn', async (c) => {
     }
 })
 
-auth.post('/signUp', async (c) => {
+authRoute.post('/signUp', async (c) => {
     try {
         const body = await c.req.json()
 
@@ -69,4 +69,4 @@ auth.post('/signUp', async (c) => {
     }
 })
 
-export default auth
+export default authRoute

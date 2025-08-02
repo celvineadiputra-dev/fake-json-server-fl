@@ -16,6 +16,7 @@
         "dotenv": "^17.2.1",
         "edit-json-file": "^1.8.1",
         "hono": "^4.8.10",
+        "mime-types": "^3.0.1",
         "zod": "^4.0.13"
     },
     "devDependencies": {

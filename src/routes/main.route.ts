@@ -3,10 +3,11 @@ import { Hono } from 'hono'
 import DbFakePath from '../config/db.js'
 import 'dotenv/config'
 import { apiResponse } from '../utils/apiResponse.util.js'
+import { randomUUID } from 'crypto'
 
-const main = new Hono()
+const mainRoute = new Hono()
 
-main.get('/', async (c) => {
+mainRoute.get('/', async (c) => {
     const key = c.req.param('key')
 
     const { size = '5', page = '1' } = c.req.query()
@@ -30,7 +31,7 @@ main.get('/', async (c) => {
     })
 })
 
-main.get('/search/:field', async (c) => {
+mainRoute.get('/search/:field', async (c) => {
     try {
         const key = c.req.param('key')
         const field = c.req.param('field')
@@ -74,7 +75,7 @@ main.get('/search/:field', async (c) => {
     }
 })
 
-main.get('/all', async (c) => {
+mainRoute.get('/all', async (c) => {
     try {
         const key = c.req.param('key')
 
@@ -88,7 +89,7 @@ main.get('/all', async (c) => {
     }
 })
 
-main.get('/:id', async (c) => {
+mainRoute.get('/:id', async (c) => {
     try {
         const key = c.req.param('key')
         const id = c.req.param('id')
@@ -107,7 +108,7 @@ main.get('/:id', async (c) => {
     }
 })
 
-main.post('/', async (c) => {
+mainRoute.post('/', async (c) => {
     try {
         const key = c.req.param('key')
 
@@ -121,6 +122,7 @@ main.post('/', async (c) => {
             autosave: true,
         })
 
+        body.id = randomUUID()
         dbFile.append(key, { ...body })
 
         return apiResponse(c, 200, `Success create new ${key}`, body)
@@ -130,7 +132,7 @@ main.post('/', async (c) => {
     }
 })
 
-main.on(['PUT', 'PATCH'], '/:id', async (c) => {
+mainRoute.on(['PUT', 'PATCH'], '/:id', async (c) => {
     try {
         const updateId = c.req.param('id')
         const key = c.req.param('key')
@@ -170,7 +172,7 @@ main.on(['PUT', 'PATCH'], '/:id', async (c) => {
     }
 })
 
-main.delete('/:id', async (c) => {
+mainRoute.delete('/:id', async (c) => {
     try {
         const id = c.req.param('id')
         const key = c.req.param('key')
@@ -194,4 +196,4 @@ main.delete('/:id', async (c) => {
     }
 })
 
-export default main
+export default mainRoute

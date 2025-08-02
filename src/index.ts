@@ -1,17 +1,21 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import { apiResponse } from './utils/apiResponse.util.js'
-import auth from './routes/auth.route.js'
 import 'dotenv/config'
-import main from './routes/main.route.js'
 import { cors } from 'hono/cors'
+import publicRoute from './routes/public.route.js'
+import protectedRoute from './routes/protected.route.js'
+import authRoute from './routes/auth.route.js'
+import path from 'path'
+import { readFile, stat } from 'fs/promises'
+import mime from 'mime-types'
 
 const config: { PORT: number | undefined; FRONTEND_DOMAIN: string } = {
     PORT: parseInt(process.env?.PORT ?? '3001'),
     FRONTEND_DOMAIN: process.env?.FRONTEND_DOMAIN ?? 'http://localhost:3007',
 }
 
-const app = new Hono().basePath('/api')
+const app = new Hono()
 
 app.use(
     cors({
@@ -26,19 +30,45 @@ app.get('/up', async (c) => {
     return apiResponse(c, 200, 'Server up')
 })
 
-app.route('/auth', auth)
-app.route('/public/:key', main)
+app.get('/storage/*', async (c) => {
+    const rawPath = c.req.path.replace('/storage/', '')
 
-app.use(async (c, next) => {
-    const token = c.req.header('Authorization')
+    // Resolve absolute path dan normalisasi untuk menghindari traversal
+    const storageRoot = path.resolve('./storage')
+    const safePath = path.normalize(path.join(storageRoot, rawPath))
 
-    if (!token || !token.includes('TOKEN_EXAMPLE_FAKE_JSON_HAPPY_LEARN_')) {
-        return apiResponse(c, 401, 'Unauthorized')
+    // Cek apakah path berada di dalam storageRoot
+    if (!safePath.startsWith(storageRoot)) {
+        return apiResponse(c, 403, 'Unauthorized access attempt', rawPath)
     }
 
-    await next()
+    try {
+        const fileStat = await stat(safePath)
+
+        if (fileStat.isDirectory()) {
+            return apiResponse(c, 400, 'Path is a directory', rawPath)
+        }
+
+        const file = await readFile(safePath)
+        const contentType = mime.lookup(safePath) || 'application/octet-stream'
+
+        return new Response(file, {
+            headers: {
+                'Content-Type': contentType,
+                'Content-Security-Policy': "default-src 'none'",
+                'X-Content-Type-Options': 'nosniff',
+                'Cache-Control': 'no-store',
+            },
+        })
+    } catch (err) {
+        console.error('File access error:', err)
+        return apiResponse(c, 404, 'File not found')
+    }
 })
-app.route('/protected/:key', main)
+
+app.route('api/auth', authRoute)
+app.route('api/public', publicRoute)
+app.route('api/protected', protectedRoute)
 
 serve(
     {
