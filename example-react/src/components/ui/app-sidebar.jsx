@@ -1,9 +1,14 @@
+import { NavLink } from 'react-router'
 import {
     Sidebar,
     SidebarContent,
     SidebarFooter,
+    SidebarGroup,
+    SidebarGroupContent,
+    SidebarGroupLabel,
     SidebarHeader,
     SidebarMenu,
+    SidebarMenuButton,
     SidebarMenuItem,
 } from './sidebar'
 
@@ -27,7 +32,22 @@ export function AppSidebar() {
                     </SidebarMenuItem>
                 </SidebarMenu>
             </SidebarHeader>
-            <SidebarContent></SidebarContent>
+            <SidebarContent>
+                <SidebarGroup>
+                    <SidebarGroupLabel>Example</SidebarGroupLabel>
+                    <SidebarGroupContent>
+                        <SidebarMenu>
+                            <SidebarMenuItem>
+                                <SidebarMenuButton asChild>
+                                    <NavLink to="/dashboard" end>
+                                        Dashboard
+                                    </NavLink>
+                                </SidebarMenuButton>
+                            </SidebarMenuItem>
+                        </SidebarMenu>
+                    </SidebarGroupContent>
+                </SidebarGroup>
+            </SidebarContent>
             <SidebarFooter />
         </Sidebar>
     )

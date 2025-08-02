@@ -50,4 +50,25 @@ export const Router = createBrowserRouter([
             },
         ],
     },
+    {
+        path: 'product',
+        Component: AuthLayout,
+        loader: () => {
+            const authFake = readFromLocalStorage('fake_auth')
+            if (!authFake) {
+                return redirect('/')
+            }
+            return
+        },
+        children: [
+            {
+                path: 'create',
+                lazy: {
+                    Component: async () =>
+                        (await import('@/views/product/add-product'))
+                            .AddProductView,
+                },
+            },
+        ],
+    },
 ])

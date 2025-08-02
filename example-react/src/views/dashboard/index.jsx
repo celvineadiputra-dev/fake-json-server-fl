@@ -1,15 +1,8 @@
 import { getProducts } from '@/actions/getProducts.action'
+import { ProductCard } from '@/components/app/product-card'
 import { Button } from '@/components/ui/button'
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from '@/components/ui/card'
-import { StarIcon, TrashIcon } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { NavLink } from 'react-router'
 import { toast } from 'react-toastify'
 
 export const DashboardView = () => {
@@ -56,42 +49,18 @@ export const DashboardView = () => {
     }
 
     return (
-        <div>
+        <div className="space-y-5">
+            <div className="flex justify-between items-center">
+                <h1 className="text-2xl font-semibold">List Products</h1>
+                <Button asChild>
+                    <NavLink to="/product/create" end>
+                        Add new product
+                    </NavLink>
+                </Button>
+            </div>
             <div className="grid grid-cols-2 gap-5 2xl:grid-cols-4">
                 {products.map((item) => {
-                    return (
-                        <Card key={item.id}>
-                            <CardHeader>
-                                <CardTitle>{item?.product_name}</CardTitle>
-                                <CardDescription>
-                                    {new Intl.NumberFormat('id-ID', {
-                                        style: 'currency',
-                                        currency: 'IDR',
-                                    }).format(item?.price)}
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="max-h-[150px] overflow-hidden w-full rounded-2xl">
-                                    <img
-                                        src={item?.image_url}
-                                        loading="lazy"
-                                        alt={item.product_name}
-                                        className="w-full object-cover"
-                                    />
-                                </div>
-                            </CardContent>
-                            <CardFooter className="gap-2">
-                                <Button>
-                                    <StarIcon />
-                                    See Rating
-                                </Button>
-                                <Button variant="destructive">
-                                    <TrashIcon />
-                                    Remove
-                                </Button>
-                            </CardFooter>
-                        </Card>
-                    )
+                    return <ProductCard item={item} />
                 })}
             </div>
         </div>
