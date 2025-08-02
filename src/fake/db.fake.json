@@ -349,6 +349,13 @@
             "price": 480000,
             "image_url": "https://picsum.photos/seed/50/400/300",
             "is_active": true
+        },
+        {
+            "id": "e3d26ac2-4b6f-480d-b368-286ac44dcace",
+            "product_name": "hello 123",
+            "price": 120000,
+            "is_active": true,
+            "image_url": "storage/uploads/f25bdd13-c20f-4aa3-937c-016c2ce6fd3e.jpg"
         }
     ],
     "ratings": [

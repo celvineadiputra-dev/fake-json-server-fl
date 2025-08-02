@@ -15,7 +15,7 @@ mainRoute.get('/', async (c) => {
     const pageSize = parseInt(size)
 
     const dbFile = editJsonFile(DbFakePath)
-    const allData = dbFile.get(key) || []
+    const allData = dbFile.get(key).reverse() || []
 
     const startIndex = (pageNumber - 1) * pageSize
     const endIndex = startIndex + pageSize
@@ -123,6 +123,9 @@ mainRoute.post('/', async (c) => {
         })
 
         body.id = randomUUID()
+        body.price = Number(body.price)
+        body.is_active = body.is_active == 'true'
+
         dbFile.append(key, { ...body })
 
         return apiResponse(c, 200, `Success create new ${key}`, body)

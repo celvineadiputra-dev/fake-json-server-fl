@@ -27,7 +27,13 @@ StorageRoute.post('/', async (c) => {
         if (!filePath) return apiResponse(c, 500, 'File storage failed')
 
         const { image, ...data } = body
-        const cleanData = { ...data, image_url: filePath, id: randomUUID() }
+        const cleanData = {
+            id: randomUUID(),
+            ...data,
+            image_url: filePath,
+            price: Number(data.price),
+            is_active: data.is_active == 'true',
+        }
 
         dbFile.append(key, cleanData)
 
@@ -69,6 +75,8 @@ StorageRoute.on(['PUT', 'PATCH'], '/:id', async (c) => {
             ...existingData[targetIndex],
             ...updateFields,
             image_url: filePath,
+            price: Number(updateFields.price),
+            is_active: updateFields.is_active == 'true',
         }
 
         existingData[targetIndex] = updatedItem

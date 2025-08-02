@@ -24,7 +24,11 @@ export const ProductCard = ({ item }) => {
             <CardContent>
                 <div className="max-h-[150px] overflow-hidden w-full rounded-2xl">
                     <img
-                        src={item?.image_url}
+                        src={
+                            item?.image_url.includes('http')
+                                ? item?.image_url
+                                : `${import.meta.env.VITE_FAKE_SERVER_JSON}/${item.image_url}`
+                        }
                         loading="lazy"
                         alt={item.product_name}
                         className="w-full object-cover"

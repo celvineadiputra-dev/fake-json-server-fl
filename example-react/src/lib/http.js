@@ -2,7 +2,7 @@ import axios from 'axios'
 import { readFromLocalStorage } from './persistance'
 
 const http = axios.create({
-    baseURL: `http://localhost:${import.meta.env.VITE_FAKE_SERVER_JSON_PORT}/api`,
+    baseURL: `${import.meta.env.VITE_FAKE_SERVER_JSON}/api`,
     headers: {
         'Content-Type': 'application/json',
     },
