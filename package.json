@@ -20,6 +20,7 @@
         "zod": "^4.0.13"
     },
     "devDependencies": {
+        "@types/mime-types": "^3.0.1",
         "@types/node": "^20.11.17",
         "husky": "^9.1.7",
         "lint-staged": "^16.1.2",
