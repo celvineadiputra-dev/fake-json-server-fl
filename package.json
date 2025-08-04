@@ -5,19 +5,22 @@
         "dev": "tsx watch src/index.ts",
         "build": "tsc",
         "start": "node dist/index.js",
-        "format": "yarn exec prettier .",
+        "format": "prettier . --write",
         "prepare": "husky"
     },
     "dependencies": {
         "@hono/node-server": "^1.17.1",
         "@types/edit-json-file": "^1.7.3",
+        "axios": "^1.11.0",
         "chalk": "^5.4.1",
         "dotenv": "^17.2.1",
         "edit-json-file": "^1.8.1",
         "hono": "^4.8.10",
+        "mime-types": "^3.0.1",
         "zod": "^4.0.13"
     },
     "devDependencies": {
+        "@types/mime-types": "^3.0.1",
         "@types/node": "^20.11.17",
         "husky": "^9.1.7",
         "lint-staged": "^16.1.2",

@@ -6,9 +6,9 @@ import z from 'zod'
 import { SignUpValidation } from '../validations/signUp.validation.js'
 import editJsonFile from 'edit-json-file'
 
-const auth = new Hono()
+const authRoute = new Hono()
 
-auth.post('/signIn', async (c) => {
+authRoute.post('/signIn', async (c) => {
     try {
         const body = await c.req.json()
 
@@ -26,7 +26,11 @@ auth.post('/signIn', async (c) => {
         }
 
         const userPayload = {
-            user: credentials,
+            user: {
+                email: credentials.email,
+                user_name: credentials.user_name,
+                profile_picture: credentials.profile_picture,
+            },
             token: `TOKEN_EXAMPLE_FAKE_JSON_HAPPY_LEARN_${credentials.email}`,
         }
 
@@ -37,7 +41,7 @@ auth.post('/signIn', async (c) => {
     }
 })
 
-auth.post('/signUp', async (c) => {
+authRoute.post('/signUp', async (c) => {
     try {
         const body = await c.req.json()
 
@@ -65,4 +69,4 @@ auth.post('/signUp', async (c) => {
     }
 })
 
-export default auth
+export default authRoute

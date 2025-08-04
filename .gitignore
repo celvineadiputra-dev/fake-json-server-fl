@@ -28,3 +28,8 @@ lerna-debug.log*
 .DS_Store
 
 dist
+
+storage/uploads/*
+!storage/uploads/.gitkeep
+
+.scannerwork
