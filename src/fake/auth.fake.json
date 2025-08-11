@@ -5,12 +5,6 @@
             "email": "example@mail.com",
             "password": "12345678",
             "profile_picture": null
-        },
-        {
-            "user_name": "fell123",
-            "email": "fell123@mail.com",
-            "password": "fell123@mail.com",
-            "profile_picture": null
         }
     ]
 }

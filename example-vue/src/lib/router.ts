@@ -8,10 +8,12 @@ const routes = [
     children: [
       {
         path: "",
+        name: "sign-in",
         component: () => import("../pages/auth/signIn/Main.vue"),
       },
       {
         path: "/sign-up",
+        name: "sign-up",
         component: () => import("../pages/auth/signUp/Main.vue"),
       },
     ],

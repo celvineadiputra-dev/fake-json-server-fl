@@ -1,13 +1,15 @@
 import axios from "axios";
+import { toast } from "vue-sonner";
 
-export const http = axios.create({
-  baseURL: "",
+const http = axios.create({
+  baseURL: `${import.meta.env.VITE_FAKE_SERVER_JSON}/api`,
   headers: {
     "Content-Type": "application/json",
   },
+  withCredentials: true,
 });
 
-axios.interceptors.request.use(
+http.interceptors.request.use(
   (config) => {
     return config;
   },
@@ -16,11 +18,21 @@ axios.interceptors.request.use(
   },
 );
 
-axios.interceptors.response.use(
-  function onFullfilled(response) {
+http.interceptors.response.use(
+  (response) => {
     return response;
   },
-  function onRejected(error) {
+  (error) => {
+    const {
+      meta: { message },
+    } = error.response.data;
+
+    toast.error(message || "Something went wrong", {
+      description: "Please try again",
+    });
+
     return Promise.reject(error);
   },
 );
+
+export default http;
